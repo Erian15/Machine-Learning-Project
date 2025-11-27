@@ -1,5 +1,5 @@
 Machine Learning Project – Financial Resilience Analysis
-ESILV – A4 / Machine Learning
+ESILV – A4 IF1/ Machine Learning
 
 --------------------------------------------------------
 Objective of the project
@@ -77,6 +77,6 @@ Authors
 - Erian Stanley Yogaraj  
 - Ouiam Boussaid Benchaara  
 
-ESILV – A4 students, Machine Learning Project.
+ESILV – A4 IF1 students, Machine Learning Project.
 
 
