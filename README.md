@@ -17,17 +17,6 @@ To address this question, we analyze and compare:
 We build machine learning models, compute financial risk metrics, and analyze market sensitivity to evaluate which region is more resilient under stress.
 
 --------------------------------------------------------
-Project Structure
-
-Machine-Learning-Project/
- ├─ data/               → Raw CSV files (TASI, EURO STOXX 50, VIX, Brent)
- ├─ notebooks/          → Main Jupyter Notebook
- ├─ figures/            → Exported visualizations
- ├─ Project_ML.ipynb    → Full analysis
- ├─ README.md           → Documentation
- └─ requirements.txt    → Dependencies (optional)
-
---------------------------------------------------------
 Methods and Analyses
 
 1. Data Processing
