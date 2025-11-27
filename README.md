@@ -79,6 +79,4 @@ Authors
 
 ESILV – A4 students, Machine Learning Project.
 
---------------------------------------------------------
-Contact
-For questions, please open an issue or contact us.
+
