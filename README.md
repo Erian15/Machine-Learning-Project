@@ -2,75 +2,65 @@ Machine Learning Project – Financial Resilience Analysis
 ESILV – A4 IF1/ Machine Learning
 
 --------------------------------------------------------
-Objective of the project
-This project investigates the following research question:
+This project explores whether the Middle Eastern stock market (Tadawul All Share Index – TASI) demonstrates stronger financial resilience compared to a major European benchmark (EURO STOXX 50).
+Using a combination of data analysis, risk metrics, econometric models, and machine-learning techniques, we analyze how each market reacts to global shocks such as volatility spikes (VIX) and oil price movements (Brent).
 
-Do Middle Eastern investment portfolios demonstrate greater financial resilience compared to European portfolios when facing global market fluctuations?
-
-To address this question, we analyze and compare:
-
-- Tadawul All Share Index (TASI) — Middle Eastern market
-- EURO STOXX 50 — European market
-- VIX Index — global volatility indicator
-- Brent Crude Oil — macroeconomic risk factor  
-
-We build machine learning models, compute financial risk metrics, and analyze market sensitivity to evaluate which region is more resilient under stress.
+The notebook includes the full pipeline, from raw data to modeling, with clear comments and step-by-step results.
 
 --------------------------------------------------------
 Methods and Analyses
 
-1. Data Processing
-- Time alignment of datasets  
-- Handling missing values  
-- Computing daily returns  
-- Merging datasets for joint analysis  
+1. Data Cleaning & Preparation
+- Convert dates and sort chronologically
+- Clean price formats
+- Compute daily returns
+- Align datasets on shared calendar dates 
 
-2. Machine Learning Modeling
-Models tested:
-- Linear Regression  
-- Ridge Regression  
-- Random Forest  
-- Support Vector Regression  
-- Grid Search  
-- Time-series cross-validation  
-- Ensemble methods (Bagging, Voting, Stacking)
+2. Exploratory Data Analysis (EDA)
+- Price evolution plots
+- Distributions of daily returns
+- 30-day rolling volatility
+- Maximum drawdown analysis
 
-3. Financial Risk Metrics
-To evaluate resilience:
-- Rolling volatility  
-- Distribution of returns  
-- Maximum drawdown  
-- Sharpe ratio  
-- Value-at-Risk (VaR)  
-- Expected Shortfall (ES)  
-- Beta vs VIX  
+3. Risk & Resilience Metrics
+- Sharpe Ratio
+- Value-at-Risk (VaR 95%)
+- Expected Shortfall (ES 95%)
+- Maximum Drawdown
 
-4. Econometric Analysis
-- OLS regression (returns vs VIX & Brent)  
-- GARCH volatility models  
-- Stress testing  
-- Rolling correlations with VIX and Brent  
+4. Econometric Modeling
+- OLS regressions: market returns explained by VIX & Brent
+- Interpretation of sensitivity to global risk 
+
+5. Volatility Modeling with GARCH
+We estimate GARCH(1,1) models to measure conditional volatility and persistence.
+This helps identify periods of volatility clustering and compare structural stability across markets.
+
+6. Machine Learning Models
+- Several models are tested using Time Series Cross-Validation:
+- Linear Regression
+- Ridge Regression
+- SVR (RBF kernel)
+- Random Forest Regressor
+
+Goal: evaluate how predictable short-term equity returns are.
 
 --------------------------------------------------------
 Key Insights (Preliminary)
 
-- TASI shows lower and smoother volatility than EURO STOXX 50.  
-- TASI is less sensitive to VIX shocks.  
-- Brent Oil has strong influence on TASI movements.  
-- ML models struggle to predict returns accurately, which is common in finance.  
-- Ensemble methods offer small improvements, but R² remains close to zero.
-
-Preliminary conclusion:  
-TASI appears more resilient overall, showing lower drawdowns, lower volatility spikes, and lower beta to VIX compared to the European index.
-
+- TASI appears structurally more resilient, with smoother volatility, weaker reactions to global market stress, and smaller drawdowns.
+- EURO STOXX 50 shows stronger sensitivity to VIX and Brent, with more pronounced volatility clustering.
+- ML models perform weakly, confirming that daily returns are inherently noisy and difficult to predict.
+- GARCH results show high volatility persistence in both markets, but TASI remains slightly more stable.
+- 
 --------------------------------------------------------
 Technologies Used
-- Python  
-- Pandas, NumPy  
-- Scikit-learn  
-- Matplotlib, Seaborn  
-- Statsmodels  
-- arch (optional for GARCH)
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Statsmodels
+- ARCH library
+- Scikit-Learn
 
 --------------------------------------------------------
 Authors
