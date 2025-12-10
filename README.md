@@ -38,7 +38,7 @@ Methods and Analyses
 - Linear Regression
 - Ridge Regression
 - SVR (RBF kernel)
-- Random Forest Regressor Volatility Modeling with GARCH
+- Random Forest Regressor Volatility Modeling 
 
 6. We estimate GARCH(1,1) models to measure conditional volatility and persistence.
 This helps identify periods of volatility clustering and compare structural stability across markets.
