@@ -33,16 +33,15 @@ Methods and Analyses
 - OLS regressions: market returns explained by VIX & Brent
 - Interpretation of sensitivity to global risk 
 
-5. Volatility Modeling with GARCH
-We estimate GARCH(1,1) models to measure conditional volatility and persistence.
-This helps identify periods of volatility clustering and compare structural stability across markets.
-
-6. Machine Learning Models
+5. Machine Learning Models
 - Several models are tested using Time Series Cross-Validation:
 - Linear Regression
 - Ridge Regression
 - SVR (RBF kernel)
-- Random Forest Regressor
+- Random Forest Regressor Volatility Modeling with GARCH
+
+6. We estimate GARCH(1,1) models to measure conditional volatility and persistence.
+This helps identify periods of volatility clustering and compare structural stability across markets.
 
 Goal: evaluate how predictable short-term equity returns are.
 
